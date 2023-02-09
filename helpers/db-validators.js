@@ -18,7 +18,7 @@ const esRolValido = async(rol='')=>{
 
   const USerExisteById= async(id)=>{
    
-    const existeUsuario = await Usuario.findOne({ _id: id });
+    const existeUsuario = await Usuario.findById(id );
     if(!existeUsuario){
         throw new Error(`El id  ${id} no existe`)
     }
